@@ -1,0 +1,467 @@
+<!-- Political Portfolio: "Voice of the People" Theme -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice of the People</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          saffron: '#FF9933',
+          navy: '#0B3D91',
+        },
+        fontFamily: {
+          serifHead: ['Merriweather', 'serif'],
+          sansBody: ['Inter', 'sans-serif'],
+        },
+        animation: {
+          'fade-in': 'fadeIn 1s ease-out forwards',
+          'fade-up': 'fadeUp 1s ease-out forwards',
+          'bounce-in': 'bounceIn 0.6s ease-out forwards',
+        },
+        keyframes: {
+          fadeIn: {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' },
+          },
+          fadeUp: {
+            '0%': { opacity: '0', transform: 'translateY(20px)' },
+            '100%': { opacity: '1', transform: 'translateY(0)' },
+          },
+          bounceIn: {
+            '0%': { opacity: '0', transform: 'scale(0.8)' },
+            '100%': { opacity: '1', transform: 'scale(1)' },
+          },
+        },
+      }
+    }
+  }
+</script>
+
+
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sansBody ">
+ <!-- Navbar -->
+<!-- Include Alpine.js -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3" defer></script>
+
+<header class="fixed top-0 left-0 w-full bg-white shadow-md rounded-b-3xl px-6 py-4 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <!-- Logo Section -->
+    <div class="flex items-center gap-2">
+      <div class="bg-navy text-white font-bold w-8 h-8 flex items-center justify-center rounded-full">P</div>
+      <span class="font-serifHead text-xl text-navy font-semibold">PeopleVoice</span>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-sansBody">
+      <a href="#" class="hover:text-navy">Home</a>
+      <a href="#" class="hover:text-navy">About</a>
+      <a href="#" class="hover:text-navy">Issues</a>
+      <a href="#" class="hover:text-navy">Campaigns</a>
+      <a href="#" class="hover:text-navy">Blog</a>
+    </nav>
+
+    <!-- Contact Button (always visible) -->
+    <a href="#contact" class="ml-auto md:ml-0 bg-navy text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-saffron transition">
+      Contact
+    </a>
+
+    <!-- Hamburger Icon -->
+    <div class="md:hidden ml-4">
+      <button id="menu-toggle" class="text-navy focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="md:hidden mt-2 px-4 space-y-3 hidden transition-all duration-300">
+    <a href="#" class="block text-gray-700 hover:text-navy font-sansBody">Home</a>
+    <a href="#" class="block text-gray-700 hover:text-navy font-sansBody">About</a>
+    <a href="#" class="block text-gray-700 hover:text-navy font-sansBody">Issues</a>
+    <a href="#" class="block text-gray-700 hover:text-navy font-sansBody">Campaigns</a>
+    <a href="#" class="block text-gray-700 hover:text-navy font-sansBody">Blog</a>
+  </div>
+
+  <!-- Toggle Script -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</header>
+
+
+
+<!-- Hero Section -->
+<section class="bg-gray-50 pt-32 pb-20">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Text -->
+    <div class="animate-fade-up delay-200">
+      <h1 class="text-5xl md:text-6xl font-serifHead text-gray-900 leading-tight mb-6">
+        Hello, I’m 
+        <span class="bg-gradient-to-r from-saffron to-navy text-transparent bg-clip-text font-bold">
+          Arun Verma
+        </span>
+      </h1>
+      <p class="text-lg text-gray-700 font-sansBody mb-8 animate-fade-up delay-300">
+        A grassroots leader committed to development, transparency, and public voice.  
+        Let’s build a better tomorrow together.
+      </p>
+      <a href="#join" class="relative inline-block text-white bg-saffron px-6 py-3 rounded-lg text-sm font-semibold overflow-hidden group hover:bg-navy transition-all">
+        <span class="absolute left-0 bottom-0 w-full h-1 bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        Join the Movement
+      </a>
+    </div>
+
+    <!-- Image -->
+    <div class="flex justify-center animate-fade-up delay-500">
+      <div class="w-80 h-96 bg-white rounded-3xl shadow-xl overflow-hidden border border-orange-200 transition-transform duration-500 hover:scale-105">
+        <img src="./assets/netaji-img1.jpg" alt="Leader" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="text-gray-800 body-font bg-[#fefdfb]">
+  <div class="container px-5 py-24 mx-auto flex flex-col">
+    <div class="lg:w-4/6 mx-auto relative">
+      <!-- Image with Title Overlay -->
+      <div class="rounded-lg h-64 overflow-hidden relative">
+        <img alt="About Us" class="object-cover object-center h-full w-full" src="./assets/netajiaboput.jpg">
+
+        <!-- Stylish Overlay Title -->
+        <div class="absolute top-6 left-6 bg-white/80 px-5 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg">
+          <h2 class="text-xl sm:text-2xl font-semibold font-sans text-navy tracking-wide">Who We Are</h2>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex flex-col sm:flex-row mt-10">
+        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+          <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-indigo-100 text-indigo-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="flex flex-col items-center text-center justify-center">
+            <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Phoebe Caulfield</h2>
+            <div class="w-12 h-1 bg-navy rounded mt-2 mb-4"></div>
+            <p class="text-base">Dedicated activist leading social transformation through digital and grassroots efforts.</p>
+          </div>
+        </div>
+        <div
+          class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+          <p class="leading-relaxed text-lg mb-4 text-gray-700">
+            We are a youth-led movement focused on positive societal change through innovation, empowerment, and education.
+            From environmental awareness to women’s rights and rural development, we aim to inspire action and impact through
+            every campaign we lead.
+          </p>
+          <a href="/about" class="text-navy font-medium inline-flex items-center hover:underline">
+            Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pb-20 bg-[#fefdfb] text-gray-800">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Stylish Section Title (Now properly placed) -->
+    <div class="inline-block bg-white/80 px-6 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg mb-6">
+      <h2 class="text-xl sm:text-2xl font-semibold text-navy tracking-wide">Achievements Snapshot</h2>
+    </div>
+
+    <!-- Subtitle -->
+    <div class="mb-10 text-center">
+      <p class="text-gray-600 text-base sm:text-lg">Celebrating our journey and milestones</p>
+    </div>
+
+    <!-- Swiper Carousel -->
+    <div class="swiper myAchievementsSwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide bg-white rounded-xl p-8 shadow-lg border border-gray-200 flex flex-col justify-between h-[180px]">
+          <div>
+            <h3 class="text-xl font-semibold text-navy mb-2">Development Projects</h3>
+            <p class="text-5xl font-bold text-saffron counter" data-target="50">0+</p>
+          </div>
+          <p class="text-sm mt-4 text-gray-500">Completed innovative apps and websites</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide bg-white rounded-xl p-8 shadow-lg border border-gray-200 flex flex-col justify-between h-[180px]">
+          <div>
+            <h3 class="text-xl font-semibold text-navy mb-2">Awards & Certifications</h3>
+            <p class="text-5xl font-bold text-saffron counter" data-target="20">0+</p>
+          </div>
+          <p class="text-sm mt-4 text-gray-500">Recognized by institutions and platforms</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide bg-white rounded-xl p-8 shadow-lg border border-gray-200 flex flex-col justify-between h-[180px]">
+          <div>
+            <h3 class="text-xl font-semibold text-navy mb-2">Happy Clients</h3>
+            <p class="text-5xl font-bold text-saffron counter" data-target="30">0+</p>
+          </div>
+          <p class="text-sm mt-4 text-gray-500">Successful collaborations and reviews</p>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide bg-white rounded-xl p-8 shadow-lg border border-gray-200 flex flex-col justify-between h-[180px]">
+          <div>
+            <h3 class="text-xl font-semibold text-navy mb-2">Workshops Attended</h3>
+            <p class="text-5xl font-bold text-saffron counter" data-target="15">0+</p>
+          </div>
+          <p class="text-sm mt-4 text-gray-500">Tech and innovation focused programs</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Current Campaigns Section -->
+<section class="bg-[#fefdfb] py-16 text-gray-800 font-sansBody">
+  <div class="max-w-7xl mx-auto px-4">
+     <div class="inline-block bg-white/80 px-6 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg mb-6">
+      <h2 class="text-xl sm:text-2xl font-semibold text-navy tracking-wide">Current Campaigns</h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Campaign Card -->
+      <div class="bg-white border border-gray-200 shadow-md rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+        <img src="./assets/netajiaboput.jpg" class="rounded-lg mb-4 w-full h-48 object-cover" alt="Campaign Image">
+        <h3 class="text-xl font-bold font-serifHead text-saffron mb-2">Clean Environment Drive</h3>
+        <p class="text-gray-600 text-sm">A mission to plant 10,000 trees and clean local parks and lakes.</p>
+      </div>
+
+      <!-- Campaign Card -->
+      <div class="bg-white border border-gray-200 shadow-md rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+        <img src="./assets/netajiaboput.jpg" class="rounded-lg mb-4 w-full h-48 object-cover" alt="Campaign Image">
+        <h3 class="text-xl font-bold font-serifHead text-saffron mb-2">Free Education Movement</h3>
+        <p class="text-gray-600 text-sm">Providing education kits and tutoring to underprivileged children.</p>
+      </div>
+
+      <!-- Campaign Card -->
+      <div class="bg-white border border-gray-200 shadow-md rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+        <img src="./assets/netajiaboput.jpg" class="rounded-lg mb-4 w-full h-48 object-cover" alt="Campaign Image">
+        <h3 class="text-xl font-bold font-serifHead text-saffron mb-2">Women Empowerment</h3>
+        <p class="text-gray-600 text-sm">Training workshops and employment opportunities for rural women.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section class="bg-[#fffefb] py-16 font-sansBody text-gray-800">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Stylish Section Title -->
+    <div class="inline-block bg-white/80 px-6 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg mb-6">
+      <h2 class="text-xl sm:text-2xl font-semibold text-navy tracking-wide">Voices of Support</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Testimonial Card -->
+      <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl hover:shadow-lg transition">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="./assets/netaji-img1.jpg" alt="Supporter" class="w-16 h-16 rounded-full border-4 border-saffron object-cover">
+          <div>
+            <h4 class="font-bold font-serifHead text-lg text-navy">Anjali Verma</h4>
+            <p class="text-sm text-gray-500">Social Worker</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">“The campaign has truly brought change to our village. I am proud to support such a noble mission.”</p>
+      </div>
+
+      <!-- Testimonial Card -->
+      <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl hover:shadow-lg transition">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="./assets/netaji-img1.jpg" alt="Supporter" class="w-16 h-16 rounded-full border-4 border-saffron object-cover">
+          <div>
+            <h4 class="font-bold font-serifHead text-lg text-navy">Ravi Kumar</h4>
+            <p class="text-sm text-gray-500">Teacher</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">“Education should be a right, not a privilege. This initiative is a step in the right direction.”</p>
+      </div>
+
+      <!-- Testimonial Card -->
+      <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl hover:shadow-lg transition">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="./assets/netaji-img1.jpg" alt="Supporter" class="w-16 h-16 rounded-full border-4 border-saffron object-cover">
+          <div>
+            <h4 class="font-bold font-serifHead text-lg text-navy">Farhan Shaikh</h4>
+            <p class="text-sm text-gray-500">Volunteer</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">“Joining the cleanup drive made me realize how collective action can really make a difference.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+    <!-- 🔷 5. Contact Section -->
+    <section id="contact" class="py-16 bg-white text-center">
+      <div class="max-w-3xl mx-auto px-6 animate-fade-up">
+        <h2 class="text-3xl font-serifHead text-navy mb-4">Get in Touch</h2>
+        <p class="text-lg font-sansBody mb-6">We’d love to hear from you! Drop us a message below.</p>
+        <form class="space-y-4">
+          <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded" />
+          <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded" />
+          <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-gray-300 rounded"></textarea>
+          <button type="submit" class="bg-saffron text-white px-6 py-2 rounded hover:bg-orange-500 transition">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+<!-- 🔚 6. Footer -->
+<footer class="bg-[#fefdfb] text-gray-700 font-sansBody">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+      
+      <!-- About Section -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Our Mission</h2>
+        <p class="text-sm text-gray-600">We are committed to community-driven development, equality, and empowerment through grassroots efforts and inclusive participation.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Quick Links</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-saffron transition">About Us</a></li>
+          <li><a href="#" class="hover:text-saffron transition">Campaigns</a></li>
+          <li><a href="#" class="hover:text-saffron transition">Join Us</a></li>
+          <li><a href="#" class="hover:text-saffron transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Contact</h2>
+        <ul class="text-sm space-y-2">
+          <li>Email: <a href="mailto:info@example.com" class="text-gray-600 hover:text-saffron">info@example.com</a></li>
+          <li>Phone: <span class="text-gray-600">+91 12345 67890</span></li>
+          <li>Location: <span class="text-gray-600">Delhi, India</span></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Stay Updated</h2>
+        <form class="flex flex-col gap-3">
+          <input type="email" placeholder="Your Email" class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-saffron text-sm">
+          <button type="submit" class="bg-saffron text-white px-4 py-2 rounded-md font-medium hover:bg-[#e6892c] transition">Subscribe</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="bg-navy text-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-sm">
+      <p>© 2025 YourCampaignName. All rights reserved.</p>
+      <div class="flex space-x-4 mt-2 sm:mt-0">
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+ 
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Counter Script -->
+<script>
+  const animateCounter = (el) => {
+    let target = +el.getAttribute("data-target");
+    let count = 0;
+    let step = Math.ceil(target / 100);
+
+    const updateCounter = () => {
+      count += step;
+      if (count > target) count = target;
+      el.innerText = count + "+";
+      if (count < target) requestAnimationFrame(updateCounter);
+    };
+    updateCounter();
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".counter").forEach((el) => animateCounter(el));
+  });
+</script>
+
+<!-- Swiper Init -->
+<script>
+  const swiper = new Swiper(".myAchievementsSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+</body>
+
+</html>
