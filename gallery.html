@@ -55,6 +55,17 @@
   }
 </script>
 
+<style>
+    /* Tailwind doesn’t include this by default */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+</style>
 
 </head>
 
@@ -189,16 +200,16 @@
 
 
 <!-- Event Albums Tabs -->
-<section class="py-16 bg-[#fefdfb]">
-  <div class="max-w-7xl mx-auto px-6">
+<section class="py-20 bg-[#fefdfb]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <h2 class="text-3xl font-semibold text-navy text-center mb-10">Event Albums</h2>
 
-    <!-- Tabs -->
-    <div class="flex justify-center space-x-4 mb-8">
-      <button class="album-tab px-6 py-2 rounded-full bg-saffron text-white font-medium" data-tab="rally">Rally</button>
-      <button class="album-tab px-6 py-2 rounded-full bg-gray-200 text-navy" data-tab="inaugurations">Inaugurations</button>
-      <button class="album-tab px-6 py-2 rounded-full bg-gray-200 text-navy" data-tab="press">Press Meets</button>
-      <button class="album-tab px-6 py-2 rounded-full bg-gray-200 text-navy" data-tab="campaigns">Campaigns</button>
+    <!-- Responsive Scrollable Tabs -->
+    <div class="flex justify-start sm:justify-center space-x-4 mb-8 overflow-x-auto scrollbar-hide whitespace-nowrap -mx-4 px-4">
+      <button class="album-tab px-6 py-2 rounded-full bg-saffron text-white font-medium whitespace-nowrap" data-tab="rally">Rally</button>
+      <button class="album-tab px-6 py-2 rounded-full bg-gray-200 text-navy whitespace-nowrap" data-tab="inaugurations">Inaugurations</button>
+      <button class="album-tab px-6 py-2 rounded-full bg-gray-200 text-navy whitespace-nowrap" data-tab="press">Press Meets</button>
+      <button class="album-tab px-6 py-2 rounded-full bg-gray-200 text-navy whitespace-nowrap" data-tab="campaigns">Campaigns</button>
     </div>
 
     <!-- Tab Content -->
@@ -227,6 +238,7 @@
     </div>
   </div>
 </section>
+
 
 
 
