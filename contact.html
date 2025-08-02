@@ -1,0 +1,358 @@
+<!-- Political Portfolio: "Voice of the People" Theme -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice of the People</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<!-- AOS Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          saffron: '#FF9933',
+          navy: '#0B3D91',
+        },
+        fontFamily: {
+          serifHead: ['Merriweather', 'serif'],
+          sansBody: ['Inter', 'sans-serif'],
+        },
+        animation: {
+          'fade-in': 'fadeIn 1s ease-out forwards',
+          'fade-up': 'fadeUp 1s ease-out forwards',
+          'bounce-in': 'bounceIn 0.6s ease-out forwards',
+        },
+        keyframes: {
+          fadeIn: {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' },
+          },
+          fadeUp: {
+            '0%': { opacity: '0', transform: 'translateY(20px)' },
+            '100%': { opacity: '1', transform: 'translateY(0)' },
+          },
+          bounceIn: {
+            '0%': { opacity: '0', transform: 'scale(0.8)' },
+            '100%': { opacity: '1', transform: 'scale(1)' },
+          },
+        },
+      }
+    }
+  }
+</script>
+
+
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sansBody ">
+ <!-- Navbar -->
+<!-- Include Alpine.js -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3" defer></script>
+
+<header class="fixed top-0 left-0 w-full bg-white shadow-md rounded-b-3xl px-6 py-4 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <!-- Logo Section -->
+    <div class="flex items-center gap-2">
+      <div class="bg-navy text-white font-bold w-8 h-8 flex items-center justify-center rounded-full">P</div>
+      <span class="font-serifHead text-xl text-navy font-semibold">PeopleVoice</span>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-sansBody">
+   <a href="./index.html" class="block text-gray-700 hover:text-navy font-sansBody">Home</a>
+    <a href="./about.html" class="block text-gray-700 hover:text-navy font-sansBody">About</a>
+    <a href="./service.html" class="block text-gray-700 hover:text-navy font-sansBody">Service</a>
+    <a href="./achievements.html" class="block text-gray-700 hover:text-navy font-sansBody">Achievements</a>
+    <a href="./gallery.html" class="block text-gray-700 hover:text-navy font-sansBody">Gallery</a>
+     <a href="./media-press.html" class="block text-gray-700 hover:text-navy font-sansBody">Press</a>
+    </nav>
+
+    <!-- Contact Button (always visible) -->
+    <a href="./contact.html" class="ml-auto md:ml-0 bg-navy text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-saffron transition">
+      Contact
+    </a>
+
+    <!-- Hamburger Icon -->
+    <div class="md:hidden ml-4">
+      <button id="menu-toggle" class="text-navy focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="md:hidden mt-2 px-4 space-y-3 hidden transition-all duration-300">
+    <a href="./index.html" class="block text-gray-700 hover:text-navy font-sansBody">Home</a>
+    <a href="./about.html" class="block text-gray-700 hover:text-navy font-sansBody">About</a>
+    <a href="./service.html" class="block text-gray-700 hover:text-navy font-sansBody">Service</a>
+    <a href="./achievements.html" class="block text-gray-700 hover:text-navy font-sansBody">Achievements</a>
+    <a href="./gallery.html" class="block text-gray-700 hover:text-navy font-sansBody">Gallery</a>
+     <a href="./media-press.html" class="block text-gray-700 hover:text-navy font-sansBody">Press</a>
+  </div>
+
+  <!-- Toggle Script -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</header>
+
+
+<!-- Contact Hero Section -->
+<section class="relative bg-[#fefdfb] pt-40 pb-24 text-center text-navy overflow-hidden" data-aos="fade-down">
+  <!-- Decorative Background Circle -->
+  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-saffron/10 rounded-full blur-3xl z-0"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-6">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4 leading-tight">Get in Touch</h1>
+    <p class="text-lg text-gray-600 mb-8">
+      Have questions, feedback, or press inquiries? We’re just a message away.
+    </p>
+    <a href="#contact-form"
+       class="inline-block px-6 py-3 bg-saffron hover:bg-[#e79a1e] text-white font-medium rounded-full transition duration-300">
+      Contact Us
+    </a>
+  </div>
+</section>
+
+
+
+<section class="bg-[#fefdfb] text-navy body-font relative">
+  <div class="container max-w-7xl mx-auto px-8 md:px-12 py-20 flex flex-wrap lg:flex-nowrap gap-10">
+
+    <!-- MAP & CONTACT INFO -->
+    <div class="lg:w-2/3 w-full bg-[#e8e8e8] rounded-xl overflow-hidden relative shadow-md p-10">
+      <iframe 
+        width="100%" height="100%" class="absolute inset-0"
+        frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+        src="https://maps.google.com/maps?q=Gandhi%20Maidaan%20Patna&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
+        title="Campaign Office Map">
+      </iframe>
+
+      <div class="relative bg-white p-6 rounded-xl flex flex-wrap z-10 shadow-md">
+        <div class="w-full sm:w-1/2 px-2 mb-4 sm:mb-0">
+          <h2 class="text-xs font-semibold tracking-widest text-navy mb-1">CAMPAIGN HEADQUARTERS</h2>
+          <p class="text-sm text-gray-600">
+            Miracle India Foundation<br>
+            Near Gandhi Maidaan<br>
+            Patna, Bihar – 800001
+          </p>
+        </div>
+        <div class="w-full sm:w-1/2 px-2">
+          <h2 class="text-xs font-semibold tracking-widest text-navy mb-1">EMAIL</h2>
+          <a href="mailto:contact@miracleindia.org" class="text-saffron text-sm hover:underline">contact@miracleindia.org</a>
+          <h2 class="text-xs font-semibold tracking-widest text-navy mt-4 mb-1">PHONE</h2>
+          <p class="text-sm text-gray-600">+91 98765 43210</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="lg:w-1/3 w-full bg-white rounded-xl p-8 shadow-md">
+      <h2 class="text-2xl font-semibold mb-3">Get In Touch</h2>
+      <p class="text-sm text-gray-600 mb-6">
+        For media, volunteering, or general inquiries — we’re here to connect.
+      </p>
+
+      <form class="space-y-4">
+        <div>
+          <label for="name" class="text-sm block mb-1">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name"
+            class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-saffron" />
+        </div>
+
+        <div>
+          <label for="email" class="text-sm block mb-1">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com"
+            class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-saffron" />
+        </div>
+
+        <div>
+          <label for="message" class="text-sm block mb-1">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Type your message..."
+            class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm text-gray-700 resize-none focus:outline-none focus:ring-2 focus:ring-saffron"></textarea>
+        </div>
+
+        <button type="submit"
+          class="bg-saffron hover:bg-[#e79a1e] text-white px-6 py-3 rounded-full font-semibold transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- 🔚 6. Footer -->
+<footer class="bg-[#fefdfb] text-gray-700 font-sansBody">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+      
+      <!-- About Section -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Our Mission</h2>
+        <p class="text-sm text-gray-600">We are committed to community-driven development, equality, and empowerment through grassroots efforts and inclusive participation.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Quick Links</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-saffron transition">About Us</a></li>
+          <li><a href="#" class="hover:text-saffron transition">Campaigns</a></li>
+          <li><a href="#" class="hover:text-saffron transition">Join Us</a></li>
+          <li><a href="#" class="hover:text-saffron transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Contact</h2>
+        <ul class="text-sm space-y-2">
+          <li>Email: <a href="mailto:info@example.com" class="text-gray-600 hover:text-saffron">info@example.com</a></li>
+          <li>Phone: <span class="text-gray-600">+91 12345 67890</span></li>
+          <li>Location: <span class="text-gray-600">Delhi, India</span></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Stay Updated</h2>
+        <form class="flex flex-col gap-3">
+          <input type="email" placeholder="Your Email" class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-saffron text-sm">
+          <button type="submit" class="bg-saffron text-white px-4 py-2 rounded-md font-medium hover:bg-[#e6892c] transition">Subscribe</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="bg-navy text-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-sm">
+      <p>© 2025 YourCampaignName. All rights reserved.</p>
+      <div class="flex space-x-4 mt-2 sm:mt-0">
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+ 
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Counter Script -->
+<script>
+  const animateCounter = (el) => {
+    let target = +el.getAttribute("data-target");
+    let count = 0;
+    let step = Math.ceil(target / 100);
+
+    const updateCounter = () => {
+      count += step;
+      if (count > target) count = target;
+      el.innerText = count + "+";
+      if (count < target) requestAnimationFrame(updateCounter);
+    };
+    updateCounter();
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".counter").forEach((el) => animateCounter(el));
+  });
+</script>
+
+<!-- Swiper Init -->
+<script>
+  const swiper = new Swiper(".myAchievementsSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+
+<!-- JS for Tabs -->
+<script>
+  const tabs = document.querySelectorAll('.album-tab');
+  const contents = document.querySelectorAll('.album-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab');
+
+      // Toggle active tab styles
+      tabs.forEach(t => {
+        t.classList.remove('bg-saffron', 'text-white');
+        t.classList.add('bg-gray-200', 'text-navy');
+      });
+      tab.classList.add('bg-saffron', 'text-white');
+
+      // Show relevant album
+      contents.forEach(c => c.classList.add('hidden'));
+      document.getElementById(target).classList.remove('hidden');
+    });
+  });
+</script>
+
+
+</body>
+
+</html>

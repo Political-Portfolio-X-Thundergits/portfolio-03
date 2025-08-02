@@ -1,0 +1,350 @@
+<!-- Political Portfolio: "Voice of the People" Theme -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice of the People</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<!-- AOS Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          saffron: '#FF9933',
+          navy: '#0B3D91',
+        },
+        fontFamily: {
+          serifHead: ['Merriweather', 'serif'],
+          sansBody: ['Inter', 'sans-serif'],
+        },
+        animation: {
+          'fade-in': 'fadeIn 1s ease-out forwards',
+          'fade-up': 'fadeUp 1s ease-out forwards',
+          'bounce-in': 'bounceIn 0.6s ease-out forwards',
+        },
+        keyframes: {
+          fadeIn: {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' },
+          },
+          fadeUp: {
+            '0%': { opacity: '0', transform: 'translateY(20px)' },
+            '100%': { opacity: '1', transform: 'translateY(0)' },
+          },
+          bounceIn: {
+            '0%': { opacity: '0', transform: 'scale(0.8)' },
+            '100%': { opacity: '1', transform: 'scale(1)' },
+          },
+        },
+      }
+    }
+  }
+</script>
+
+
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sansBody ">
+ <!-- Navbar -->
+<!-- Include Alpine.js -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3" defer></script>
+
+<header class="fixed top-0 left-0 w-full bg-white shadow-md rounded-b-3xl px-6 py-4 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <!-- Logo Section -->
+    <div class="flex items-center gap-2">
+      <div class="bg-navy text-white font-bold w-8 h-8 flex items-center justify-center rounded-full">P</div>
+      <span class="font-serifHead text-xl text-navy font-semibold">PeopleVoice</span>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-sansBody">
+   <a href="./index.html" class="block text-gray-700 hover:text-navy font-sansBody">Home</a>
+    <a href="./about.html" class="block text-gray-700 hover:text-navy font-sansBody">About</a>
+    <a href="./service.html" class="block text-gray-700 hover:text-navy font-sansBody">Service</a>
+    <a href="./achievements.html" class="block text-gray-700 hover:text-navy font-sansBody">Achievements</a>
+    <a href="./gallery.html" class="block text-gray-700 hover:text-navy font-sansBody">Gallery</a>
+     <a href="./media-press.html" class="block text-gray-700 hover:text-navy font-sansBody">Press</a>
+    </nav>
+
+    <!-- Contact Button (always visible) -->
+    <a href="./contact.html" class="ml-auto md:ml-0 bg-navy text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-saffron transition">
+      Contact
+    </a>
+
+    <!-- Hamburger Icon -->
+    <div class="md:hidden ml-4">
+      <button id="menu-toggle" class="text-navy focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="md:hidden mt-2 px-4 space-y-3 hidden transition-all duration-300">
+    <a href="./index.html" class="block text-gray-700 hover:text-navy font-sansBody">Home</a>
+    <a href="./about.html" class="block text-gray-700 hover:text-navy font-sansBody">About</a>
+    <a href="./service.html" class="block text-gray-700 hover:text-navy font-sansBody">Service</a>
+    <a href="./achievements.html" class="block text-gray-700 hover:text-navy font-sansBody">Achievements</a>
+    <a href="./gallery.html" class="block text-gray-700 hover:text-navy font-sansBody">Gallery</a>
+     <a href="./media-press.html" class="block text-gray-700 hover:text-navy font-sansBody">Press</a>
+  </div>
+
+  <!-- Toggle Script -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</header>
+
+<!-- Services / Initiatives Hero Section -->
+<section class="pt-[120px] pb-16 bg-white text-navy" data-aos="fade-down" data-aos-delay="50">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <!-- Highlighted Label -->
+    <span class="inline-block bg-saffron text-white text-sm font-medium px-4 py-1 rounded-full mb-4 tracking-wider">
+      People-Centric Governance
+    </span>
+
+    <!-- Main Heading -->
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
+      Empowering Lives Through <br class="hidden sm:inline" />
+      Grassroots <span class="text-saffron">Initiatives</span>
+    </h1>
+
+    <!-- Supporting Text -->
+    <p class="text-lg sm:text-xl leading-relaxed text-gray-700 max-w-2xl mx-auto mb-8">
+      Discover transformative programs focused on education, health, employment, and digital empowerment—designed to uplift every citizen.
+    </p>
+
+    <!-- Call-to-Action Button -->
+    <a href="#initiatives" class="inline-block bg-navy hover:bg-saffron transition-all duration-300 text-white font-medium px-8 py-3 rounded-full shadow-lg">
+      Explore Initiatives
+    </a>
+  </div>
+</section>
+
+
+
+<!-- Services / Initiatives Section -->
+<section class="bg-[#fefdfb] text-gray-800 py-20 px-4 sm:px-8 lg:px-16" id="initiatives">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Heading -->
+    <div class="inline-block bg-white/80 px-6 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg mb-10">
+      <h2 class="text-xl sm:text-2xl font-semibold text-navy tracking-wide">Services / Initiatives</h2>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Education Support -->
+      <div class="bg-white/90 shadow-lg rounded-xl p-6" data-aos="fade-up">
+        <div class="text-4xl text-navy mb-4">
+          <i class="fas fa-book-reader"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-navy mb-2">Education Support</h3>
+        <p class="text-base leading-relaxed mb-4">
+          Scholarships and digital tools to help underprivileged students access quality education.
+        </p>
+        <a href="#" class="inline-block text-navy font-medium hover:underline">Read More →</a>
+      </div>
+
+      <!-- Health & Sanitation -->
+      <div class="bg-white/90 shadow-lg rounded-xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-4xl text-navy mb-4">
+          <i class="fas fa-hand-holding-medical"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-navy mb-2">Health & Sanitation</h3>
+        <p class="text-base leading-relaxed mb-4">
+          Mobile health vans and sanitation drives improving rural healthcare access and hygiene.
+        </p>
+        <a href="#" class="inline-block text-navy font-medium hover:underline">Read More →</a>
+      </div>
+
+      <!-- Employment Drives -->
+      <div class="bg-white/90 shadow-lg rounded-xl p-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-4xl text-navy mb-4">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-navy mb-2">Employment Drives</h3>
+        <p class="text-base leading-relaxed mb-4">
+          Job fairs and skill development programs empowering youth through meaningful careers.
+        </p>
+        <a href="#" class="inline-block text-navy font-medium hover:underline">Read More →</a>
+      </div>
+
+      <!-- Women Empowerment -->
+      <div class="bg-white/90 shadow-lg rounded-xl p-6" data-aos="fade-up">
+        <div class="text-4xl text-navy mb-4">
+          <i class="fas fa-female"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-navy mb-2">Women Empowerment</h3>
+        <p class="text-base leading-relaxed mb-4">
+          Supporting women-led SHGs, education for girls, and safety awareness initiatives.
+        </p>
+        <a href="#" class="inline-block text-navy font-medium hover:underline">Read More →</a>
+      </div>
+
+      <!-- Digital India / Tech Initiatives -->
+      <div class="bg-white/90 shadow-lg rounded-xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-4xl text-navy mb-4">
+          <i class="fas fa-wifi"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-navy mb-2">Digital India / Tech</h3>
+        <p class="text-base leading-relaxed mb-4">
+          Promoting digital literacy, online services, and tech-enabled governance in rural zones.
+        </p>
+        <a href="#" class="inline-block text-navy font-medium hover:underline">Read More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- 🔚 6. Footer -->
+<footer class="bg-[#fefdfb] text-gray-700 font-sansBody">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+      
+      <!-- About Section -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Our Mission</h2>
+        <p class="text-sm text-gray-600">We are committed to community-driven development, equality, and empowerment through grassroots efforts and inclusive participation.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Quick Links</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-saffron transition">About Us</a></li>
+          <li><a href="#" class="hover:text-saffron transition">Campaigns</a></li>
+          <li><a href="#" class="hover:text-saffron transition">Join Us</a></li>
+          <li><a href="#" class="hover:text-saffron transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Contact</h2>
+        <ul class="text-sm space-y-2">
+          <li>Email: <a href="mailto:info@example.com" class="text-gray-600 hover:text-saffron">info@example.com</a></li>
+          <li>Phone: <span class="text-gray-600">+91 12345 67890</span></li>
+          <li>Location: <span class="text-gray-600">Delhi, India</span></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h2 class="text-lg font-serifHead font-bold text-navy mb-4">Stay Updated</h2>
+        <form class="flex flex-col gap-3">
+          <input type="email" placeholder="Your Email" class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-saffron text-sm">
+          <button type="submit" class="bg-saffron text-white px-4 py-2 rounded-md font-medium hover:bg-[#e6892c] transition">Subscribe</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="bg-navy text-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-sm">
+      <p>© 2025 YourCampaignName. All rights reserved.</p>
+      <div class="flex space-x-4 mt-2 sm:mt-0">
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-saffron transition"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+ 
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Counter Script -->
+<script>
+  const animateCounter = (el) => {
+    let target = +el.getAttribute("data-target");
+    let count = 0;
+    let step = Math.ceil(target / 100);
+
+    const updateCounter = () => {
+      count += step;
+      if (count > target) count = target;
+      el.innerText = count + "+";
+      if (count < target) requestAnimationFrame(updateCounter);
+    };
+    updateCounter();
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".counter").forEach((el) => animateCounter(el));
+  });
+</script>
+
+<!-- Swiper Init -->
+<script>
+  const swiper = new Swiper(".myAchievementsSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+
+</body>
+
+</html>
