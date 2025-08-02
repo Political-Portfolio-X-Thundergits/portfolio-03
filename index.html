@@ -14,6 +14,10 @@
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
 
+<!-- AOS Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+
 <script>
   tailwind.config = {
     theme: {
@@ -69,7 +73,7 @@
     <!-- Desktop Navigation -->
     <nav class="hidden md:flex space-x-8 text-gray-700 font-sansBody">
       <a href="#" class="hover:text-navy">Home</a>
-      <a href="#" class="hover:text-navy">About</a>
+      <a href="./about.html" class="hover:text-navy">About</a>
       <a href="#" class="hover:text-navy">Issues</a>
       <a href="#" class="hover:text-navy">Campaigns</a>
       <a href="#" class="hover:text-navy">Blog</a>
@@ -95,7 +99,7 @@
   <!-- Mobile Dropdown Menu -->
   <div id="mobile-menu" class="md:hidden mt-2 px-4 space-y-3 hidden transition-all duration-300">
     <a href="#" class="block text-gray-700 hover:text-navy font-sansBody">Home</a>
-    <a href="#" class="block text-gray-700 hover:text-navy font-sansBody">About</a>
+    <a href="./about.html" class="block text-gray-700 hover:text-navy font-sansBody">About</a>
     <a href="#" class="block text-gray-700 hover:text-navy font-sansBody">Issues</a>
     <a href="#" class="block text-gray-700 hover:text-navy font-sansBody">Campaigns</a>
     <a href="#" class="block text-gray-700 hover:text-navy font-sansBody">Blog</a>
@@ -119,25 +123,25 @@
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
     
     <!-- Text -->
-    <div class="animate-fade-up delay-200">
+    <div data-aos="fade-up" data-aos-delay="100">
       <h1 class="text-5xl md:text-6xl font-serifHead text-gray-900 leading-tight mb-6">
         Hello, I’m 
         <span class="bg-gradient-to-r from-saffron to-navy text-transparent bg-clip-text font-bold">
           Arun Verma
         </span>
       </h1>
-      <p class="text-lg text-gray-700 font-sansBody mb-8 animate-fade-up delay-300">
+      <p class="text-lg text-gray-700 font-sansBody mb-8" data-aos="fade-up" data-aos-delay="200">
         A grassroots leader committed to development, transparency, and public voice.  
         Let’s build a better tomorrow together.
       </p>
-      <a href="#join" class="relative inline-block text-white bg-saffron px-6 py-3 rounded-lg text-sm font-semibold overflow-hidden group hover:bg-navy transition-all">
+      <a href="#join" class="relative inline-block text-white bg-saffron px-6 py-3 rounded-lg text-sm font-semibold overflow-hidden group hover:bg-navy transition-all" data-aos="zoom-in" data-aos-delay="300">
         <span class="absolute left-0 bottom-0 w-full h-1 bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
         Join the Movement
       </a>
     </div>
 
     <!-- Image -->
-    <div class="flex justify-center animate-fade-up delay-500">
+    <div class="flex justify-center" data-aos="fade-up" data-aos-delay="400">
       <div class="w-80 h-96 bg-white rounded-3xl shadow-xl overflow-hidden border border-orange-200 transition-transform duration-500 hover:scale-105">
         <img src="./assets/netaji-img1.jpg" alt="Leader" class="w-full h-full object-cover" />
       </div>
@@ -150,10 +154,8 @@
   <div class="container px-5 py-24 mx-auto flex flex-col">
     <div class="lg:w-4/6 mx-auto relative">
       <!-- Image with Title Overlay -->
-      <div class="rounded-lg h-64 overflow-hidden relative">
+      <div class="rounded-lg h-64 overflow-hidden relative" data-aos="zoom-in">
         <img alt="About Us" class="object-cover object-center h-full w-full" src="./assets/netajiaboput.jpg">
-
-        <!-- Stylish Overlay Title -->
         <div class="absolute top-6 left-6 bg-white/80 px-5 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg">
           <h2 class="text-xl sm:text-2xl font-semibold font-sans text-navy tracking-wide">Who We Are</h2>
         </div>
@@ -161,7 +163,7 @@
 
       <!-- Main Content -->
       <div class="flex flex-col sm:flex-row mt-10">
-        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8" data-aos="fade-right">
           <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-indigo-100 text-indigo-500">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
               stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
@@ -169,14 +171,14 @@
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </div>
-          <div class="flex flex-col items-center text-center justify-center">
-            <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Phoebe Caulfield</h2>
+          <div class="flex flex-col items-center text-center justify-center mt-4">
+            <h2 class="font-medium title-font text-gray-900 text-lg">Phoebe Caulfield</h2>
             <div class="w-12 h-1 bg-navy rounded mt-2 mb-4"></div>
             <p class="text-base">Dedicated activist leading social transformation through digital and grassroots efforts.</p>
           </div>
         </div>
-        <div
-          class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+
+        <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left" data-aos="fade-left">
           <p class="leading-relaxed text-lg mb-4 text-gray-700">
             We are a youth-led movement focused on positive societal change through innovation, empowerment, and education.
             From environmental awareness to women’s rights and rural development, we aim to inspire action and impact through
@@ -195,20 +197,20 @@
   </div>
 </section>
 
+
 <section class="pb-20 bg-[#fefdfb] text-gray-800">
   <div class="max-w-7xl mx-auto px-6">
-    <!-- Stylish Section Title (Now properly placed) -->
-    <div class="inline-block bg-white/80 px-6 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg mb-6">
+    <!-- Section Title -->
+    <div class="inline-block bg-white/80 px-6 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg mb-6" data-aos="fade-right">
       <h2 class="text-xl sm:text-2xl font-semibold text-navy tracking-wide">Achievements Snapshot</h2>
     </div>
 
-    <!-- Subtitle -->
-    <div class="mb-10 text-center">
+    <div class="mb-10 text-center" data-aos="fade-up" data-aos-delay="100">
       <p class="text-gray-600 text-base sm:text-lg">Celebrating our journey and milestones</p>
     </div>
 
     <!-- Swiper Carousel -->
-    <div class="swiper myAchievementsSwiper">
+    <div class="swiper myAchievementsSwiper" data-aos="zoom-in-up" data-aos-delay="200">
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
         <div class="swiper-slide bg-white rounded-xl p-8 shadow-lg border border-gray-200 flex flex-col justify-between h-[180px]">
@@ -251,30 +253,28 @@
 </section>
 
 
-<!-- Current Campaigns Section -->
+
 <section class="bg-[#fefdfb] py-16 text-gray-800 font-sansBody">
   <div class="max-w-7xl mx-auto px-4">
-     <div class="inline-block bg-white/80 px-6 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg mb-6">
+    <div class="inline-block bg-white/80 px-6 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg mb-6">
       <h2 class="text-xl sm:text-2xl font-semibold text-navy tracking-wide">Current Campaigns</h2>
     </div>
-    
+
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Campaign Card -->
-      <div class="bg-white border border-gray-200 shadow-md rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+      <div class="bg-white border border-gray-200 shadow-md rounded-xl p-6 hover:shadow-xl transition-all duration-300 animate-fade-up delay-100">
         <img src="./assets/netajiaboput.jpg" class="rounded-lg mb-4 w-full h-48 object-cover" alt="Campaign Image">
         <h3 class="text-xl font-bold font-serifHead text-saffron mb-2">Clean Environment Drive</h3>
         <p class="text-gray-600 text-sm">A mission to plant 10,000 trees and clean local parks and lakes.</p>
       </div>
 
-      <!-- Campaign Card -->
-      <div class="bg-white border border-gray-200 shadow-md rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+      <div class="bg-white border border-gray-200 shadow-md rounded-xl p-6 hover:shadow-xl transition-all duration-300 animate-fade-up delay-200">
         <img src="./assets/netajiaboput.jpg" class="rounded-lg mb-4 w-full h-48 object-cover" alt="Campaign Image">
         <h3 class="text-xl font-bold font-serifHead text-saffron mb-2">Free Education Movement</h3>
         <p class="text-gray-600 text-sm">Providing education kits and tutoring to underprivileged children.</p>
       </div>
 
-      <!-- Campaign Card -->
-      <div class="bg-white border border-gray-200 shadow-md rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+      <div class="bg-white border border-gray-200 shadow-md rounded-xl p-6 hover:shadow-xl transition-all duration-300 animate-fade-up delay-300">
         <img src="./assets/netajiaboput.jpg" class="rounded-lg mb-4 w-full h-48 object-cover" alt="Campaign Image">
         <h3 class="text-xl font-bold font-serifHead text-saffron mb-2">Women Empowerment</h3>
         <p class="text-gray-600 text-sm">Training workshops and employment opportunities for rural women.</p>
@@ -283,18 +283,15 @@
   </div>
 </section>
 
-
-<!-- Testimonials Section -->
 <section class="bg-[#fffefb] py-16 font-sansBody text-gray-800">
   <div class="max-w-7xl mx-auto px-4">
-    <!-- Stylish Section Title -->
     <div class="inline-block bg-white/80 px-6 py-2 rounded-br-[40px] rounded-tl-[20px] border-l-4 border-navy shadow-lg mb-6">
       <h2 class="text-xl sm:text-2xl font-semibold text-navy tracking-wide">Voices of Support</h2>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Testimonial Card -->
-      <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl hover:shadow-lg transition">
+      <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl hover:shadow-lg transition animate-slide-in-up delay-100">
         <div class="flex items-center gap-4 mb-4">
           <img src="./assets/netaji-img1.jpg" alt="Supporter" class="w-16 h-16 rounded-full border-4 border-saffron object-cover">
           <div>
@@ -305,8 +302,7 @@
         <p class="text-gray-600 text-sm">“The campaign has truly brought change to our village. I am proud to support such a noble mission.”</p>
       </div>
 
-      <!-- Testimonial Card -->
-      <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl hover:shadow-lg transition">
+      <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl hover:shadow-lg transition animate-slide-in-up delay-200">
         <div class="flex items-center gap-4 mb-4">
           <img src="./assets/netaji-img1.jpg" alt="Supporter" class="w-16 h-16 rounded-full border-4 border-saffron object-cover">
           <div>
@@ -317,8 +313,7 @@
         <p class="text-gray-600 text-sm">“Education should be a right, not a privilege. This initiative is a step in the right direction.”</p>
       </div>
 
-      <!-- Testimonial Card -->
-      <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl hover:shadow-lg transition">
+      <div class="bg-white border border-gray-200 shadow-md p-6 rounded-xl hover:shadow-lg transition animate-slide-in-up delay-300">
         <div class="flex items-center gap-4 mb-4">
           <img src="./assets/netaji-img1.jpg" alt="Supporter" class="w-16 h-16 rounded-full border-4 border-saffron object-cover">
           <div>
@@ -459,6 +454,14 @@
         slidesPerView: 3,
       },
     },
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
   });
 </script>
 
